@@ -66,24 +66,26 @@ export default function ServicesSection() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`bg-[#F5F5F5] p-8 rounded-lg shadow-2xl transform transition-all duration-300 relative ${
+              className={`bg-[#F5F5F5] p-8 rounded-lg shadow-2xl transform transition-all ease-in-out duration-600 relative ${
                 activeCard === index
                   ? "scale-110 z-30" // Active card: biggest and on top
                   : activeCard !== null
                   ? "scale-105 z-20 blur-[1.5px] -mt-2" // Other cards: slightly zoomed, blurred, and no gap
                   : ""
               }`}
+              onMouseEnter={() => toggleCard(index)}
+              onMouseLeave={() => setActiveCard(null)}
             >
               {/* Clickable Icon */}
               <button
                 className="absolute top-4 right-4 text-[#050B0B] hover:text-[#081617] transition-colors"
-                onClick={() => toggleCard(index)}
               >
-                <Image src="/dropmenu.png"
-                 alt="dropdownicon"
-                 width={18.476755190490987}
-                 height={10.43626237140942}
-                 />
+                <Image 
+                  src="/dropmenu.png"
+                  alt="dropdownicon"
+                  width={18.476755190490987}
+                  height={10.43626237140942}
+                />
               </button>
 
               <h3 className="text-[30px] font-[500] mb-4">{card.title}</h3>

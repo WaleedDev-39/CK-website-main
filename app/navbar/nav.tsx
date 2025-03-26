@@ -25,12 +25,17 @@ export default function Navbar() {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
 
+  // Handle mouse leave from dropdown
+  const handleDropdownLeave = () => {
+    setActiveDropdown(null);
+  };
+
   return (
     <nav className="bg-white text-[#050B0B] py-8 px-6 shadow-lg text-[20px]">
       <div className="w-full mx-auto px-12 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <Image src="/logo.svg" alt="logo" width={55} height={32} className="relative top-[0px] left-[0px]"/>
+          <Image src="/logo.svg" alt="logo" width={55} height={32} className="relative top-[0px] left-[0px]" />
         </Link>
 
         {/* Desktop Menu */}
@@ -38,8 +43,12 @@ export default function Navbar() {
           <li className="absolute top-[38px] left-[887px] w-[55px] h-[27px]:"><Link href="/">Home</Link></li>
 
           {/* Services Dropdown */}
-          <li className="absolute top-[38px] left-[984px] dropdown w-[75px] h-[27px]">
-            <button onClick={() => toggleDropdown("services")} className="flex items-center gap-1">
+          <li 
+            className="absolute top-[38px] left-[984px] dropdown w-[75px] h-[27px]"
+            onMouseEnter={() => setActiveDropdown("services")}
+            onMouseLeave={handleDropdownLeave}
+          >
+            <button className="flex items-center gap-1">
               Services <ChevronDown size={18} />
             </button>
             {activeDropdown === "services" && (
@@ -52,8 +61,12 @@ export default function Navbar() {
           </li>
 
           {/* Expertise Dropdown */}
-          <li className="absolute top-[38px] left-[1102px] dropdown w-[85px] h-[27px]">
-            <button onClick={() => toggleDropdown("expertise")} className="flex items-center gap-1">
+          <li 
+            className="absolute top-[38px] left-[1102px] dropdown w-[85px] h-[27px]"
+            onMouseEnter={() => setActiveDropdown("expertise")}
+            onMouseLeave={handleDropdownLeave}
+          >
+            <button className="flex items-center gap-1">
               Expertise <ChevronDown size={18} />
             </button>
             {activeDropdown === "expertise" && (
@@ -65,10 +78,25 @@ export default function Navbar() {
             )}
           </li>
 
-          <li className="absolute top-[38px] left-[1232px] w-[93px] h-[27px]"><Link href="/resources">Resources</Link></li>
+          <li 
+            className="absolute top-[38px] left-[1232px] dropdown w-[93px] h-[27px]"
+            onMouseEnter={() => setActiveDropdown("resources")}
+            onMouseLeave={handleDropdownLeave}
+          >
+            <button className="flex items-center gap-1">
+              Resources <ChevronDown size={18} />
+            </button>
+            {activeDropdown === "resources" && (
+              <ul className="absolute left-0 mt-2 w-48 z-10 bg-white shadow-md rounded-md p-2">
+                <li><Link href="/Resources/Resources" className="block p-2 hover:bg-gray-200">Resources 1</Link></li>
+                <li><Link href="/Resources/Resources" className="block p-2 hover:bg-gray-200">Resources 2</Link></li>
+                <li><Link href="/Resources/Resources" className="block p-2 hover:bg-gray-200">Resources 3</Link></li>
+              </ul>
+            )}
+          </li>
           <li className="absolute top-[38px] left-[1358px] w-[85px] h-[27px]:"><Link href="/about">About Us</Link></li>
 
-          <Image src="/search.svg" alt="search" width={34} height={31} className="absolute top-[30px] left-[1487px]"/>
+          <Image src="/search.svg" alt="search" width={34} height={31} className="absolute top-[30px] left-[1487px]" />
         </ul>
 
         {/* Mobile Menu Button */}
