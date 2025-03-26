@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+ul li,
+p {
+  font-family: "Nunito", sans-serif;
+}
+
+h1,h2,h3{
+  font-family: 'Clash Grotesk', sans-serif;
+}

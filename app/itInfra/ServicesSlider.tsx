@@ -39,10 +39,10 @@ export default function ServicesSection() {
     <section className="bg-white text-[#050B0B] py-16 px-6 overflow-x-hidden relative">
       {/* Side Image (Hidden on Mobile) */}
       <div
-        className="absolute inset-y-0 top-72 right-32 w-1/3 bg-cover bg-no-repeat bg-center opacity-80 hidden md:block"
+        className="absolute w-[428px] h-[642px] rounded-[30px] inset-y-0 top-72 right-32 bg-cover bg-no-repeat bg-center hidden md:block"
         style={{
           backgroundImage: "url('/building.png')",
-          backgroundSize: "90%",
+          backgroundSize: "100%",
           zIndex: 1,
         }}
       ></div>
@@ -51,17 +51,17 @@ export default function ServicesSection() {
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Centered Heading and Paragraph */}
         <div className="text-center mb-12">
-          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-[500] mb-6">
+          <h2 className="text-[32px] w-[797px] h-[115px] sm:text-[40px] md:text-[48px] font-[500] mb-6">
             Let's solve your most complex IT <br /> infrastructure challenges.
           </h2>
-          <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] max-w-[800px] mx-auto">
+          <p className="w-[784px] h-[50px] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] max-w-[800px] mx-auto">
             Code to Kloud's solutions are designed to simplify complexity, delivering
             tailored services that ensure performance, scalability, and security.
           </p>
         </div>
 
         {/* Cards on the Left Side */}
-        <div className={`w-2/3 ${activeCard !== null ? 'space-y-0' : 'space-y-8'}`}>
+        <div className={`w-[741px] h-[270px] ${activeCard !== null ? 'space-y-0' : 'space-y-8'}`}>
           {cards.map((card, index) => (
             <div
               key={index}

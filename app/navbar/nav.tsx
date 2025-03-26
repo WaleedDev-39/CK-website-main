@@ -30,15 +30,15 @@ export default function Navbar() {
       <div className="w-full mx-auto px-12 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <Image src="/logo.svg" alt="logo" width={55} height={32} />
+          <Image src="/logo.svg" alt="logo" width={55} height={32} className="relative top-[0px] left-[0px]"/>
         </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-9">
-          <li className="w-[55px] h-[27px]:"><Link href="/">Home</Link></li>
+          <li className="absolute top-[38px] left-[887px] w-[55px] h-[27px]:"><Link href="/">Home</Link></li>
 
           {/* Services Dropdown */}
-          <li className="relative dropdown w-[75px] h-[27px]">
+          <li className="absolute top-[38px] left-[984px] dropdown w-[75px] h-[27px]">
             <button onClick={() => toggleDropdown("services")} className="flex items-center gap-1">
               Services <ChevronDown size={18} />
             </button>
@@ -52,7 +52,7 @@ export default function Navbar() {
           </li>
 
           {/* Expertise Dropdown */}
-          <li className="relative dropdown w-[85px] h-[27px]">
+          <li className="absolute top-[38px] left-[1102px] dropdown w-[85px] h-[27px]">
             <button onClick={() => toggleDropdown("expertise")} className="flex items-center gap-1">
               Expertise <ChevronDown size={18} />
             </button>
@@ -65,10 +65,10 @@ export default function Navbar() {
             )}
           </li>
 
-          <li className="w-[93px] h-[27px]"><Link href="/resources">Resources</Link></li>
-          <li className="w-[85px] h-[27px]:"><Link href="/about">About Us</Link></li>
+          <li className="absolute top-[38px] left-[1232px] w-[93px] h-[27px]"><Link href="/resources">Resources</Link></li>
+          <li className="absolute top-[38px] left-[1358px] w-[85px] h-[27px]:"><Link href="/about">About Us</Link></li>
 
-          <Image src="/search.svg" alt="search" width={34} height={31} />
+          <Image src="/search.svg" alt="search" width={34} height={31} className="absolute top-[30px] left-[1487px]"/>
         </ul>
 
         {/* Mobile Menu Button */}

@@ -5,7 +5,7 @@ export default function VisionMission() {
     <section className="bg-[#081012] text-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Background Image (Hidden on Mobile) */}
-        <div className="hidden md:block w-full md:w-1/2 pl-0">
+        <div className="hidden md:block md:w-1/2 pl-0">
           <img
             src="/networks-time-dots.png" // Replace with your image path
             alt="Background"
@@ -19,7 +19,7 @@ export default function VisionMission() {
             Our Vision and Mission
           </h2>
 
-          <p className="text-[16px] text-center sm:text-[18px] md:text-[24px] leading-[28px] md:leading-[32px]">
+          <p className="text-[29px] font-[400] text-center sm:text-[18px] md:text-[24px] leading-[30px] md:leading-[32px]">
             As architects of connection, we empower businesses across the globe
             to envision a future where legacy technology serves as a foundational
             stepping stone towards progress. Our mission is to connect the dots
