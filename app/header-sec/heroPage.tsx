@@ -1,4 +1,6 @@
 import CompaniesSlider from "../companies/slidingSwiper";
+import Image from "next/image";
+
 export default function Header() {
   return (
     <header className="bg-white text-[#050B0B] w-full min-h-[777px] relative overflow-x-hidden">
@@ -18,7 +20,7 @@ export default function Header() {
             Get Started
           </button>
 
-          <img
+          <Image
             src="/Aws-Partnered-3.svg"
             alt="AWS"
             width={91}

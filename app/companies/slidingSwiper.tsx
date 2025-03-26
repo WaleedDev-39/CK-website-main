@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { useState } from "react";
 
@@ -42,10 +44,13 @@ export default function CompaniesSlider() {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <img
+            <Image
               src={company.logo}
               alt={company.name}
-              className={`w-32 h-32 object-contain transition-transform duration-300 ${
+              width={91}
+              height={29}
+              className={` object-contain transition-transform duration-300 ${
+              
                 hoveredIndex === index ? "scale-110" : ""
               }`}
             />

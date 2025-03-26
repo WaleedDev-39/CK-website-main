@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function VisionMission() {
   return (
@@ -6,10 +7,12 @@ export default function VisionMission() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Background Image (Hidden on Mobile) */}
         <div className="hidden md:block md:w-1/2 pl-0">
-          <img
+          <Image
             src="/networks-time-dots.png" // Replace with your image path
             alt="Background"
-            className="w-full h-auto"
+            // className="w-full h-auto"
+            width={870.2183227539062}
+            height={702.82666015625}
           />
         </div>
 

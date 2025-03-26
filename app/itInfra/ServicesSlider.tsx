@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 // Define the type for card data
 interface CardData {
@@ -52,10 +53,10 @@ export default function ServicesSection() {
         {/* Centered Heading and Paragraph */}
         <div className="text-center mb-12">
           <h2 className="text-[32px] w-[797px] h-[115px] sm:text-[40px] md:text-[48px] font-[500] mb-6">
-            Let's solve your most complex IT <br /> infrastructure challenges.
+            Let&apos;s solve your most complex IT <br /> infrastructure challenges.
           </h2>
           <p className="w-[784px] h-[50px] text-[16px] sm:text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] max-w-[800px] mx-auto">
-            Code to Kloud's solutions are designed to simplify complexity, delivering
+            Code to Kloud&apos;s solutions are designed to simplify complexity, delivering
             tailored services that ensure performance, scalability, and security.
           </p>
         </div>
@@ -78,7 +79,11 @@ export default function ServicesSection() {
                 className="absolute top-4 right-4 text-[#050B0B] hover:text-[#081617] transition-colors"
                 onClick={() => toggleCard(index)}
               >
-                <img src="/dropmenu.png" alt="dropdownicon" />
+                <Image src="/dropmenu.png"
+                 alt="dropdownicon"
+                 width={18.476755190490987}
+                 height={10.43626237140942}
+                 />
               </button>
 
               <h3 className="text-[30px] font-[500] mb-4">{card.title}</h3>
