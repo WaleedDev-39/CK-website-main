@@ -37,7 +37,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="bg-white text-[#050B0B] py-16 px-6 overflow-x-hidden relative">
+    <section className="bg-white text-[#050B0B] py-16 px-6  relative">
       {/* Side Image (Hidden on Mobile) */}
       <div
         className="absolute w-[428px] h-[642px] rounded-[30px] inset-y-0 top-72 right-32 bg-cover bg-no-repeat bg-center hidden md:block"

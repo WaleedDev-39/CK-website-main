@@ -1,28 +1,25 @@
 import React from "react";
-import Image from "next/image";
 
 export default function VisionMission() {
   return (
-    <section className="bg-[#081012] text-white overflow-x-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <section className="bg-[#081012] text-white px-4">
+      <div className="max-w-7xl mx-auto  flex flex-col md:flex-row items-center h-auto md:h-[28rem]">
         {/* Background Image (Hidden on Mobile) */}
-        <div className="hidden md:block md:w-1/2 pl-0">
-          <Image
-            src="/networks-time-dots.png" // Replace with your image path
+        <div className="absolute  -left-32 top-[768px] hidden md:block">
+          <img
+            src="/networks-time-dots.png"
             alt="Background"
-            // className="w-full h-auto"
-            width={870.2183227539062}
-            height={702.82666015625}
+            className="w-full h-full"
           />
         </div>
 
         {/* Content (Heading and Paragraph) */}
-        <div className="w-full md:w-1/2 px-3 py-5 md:px-0">
-          <h2 className="text-center text-[32px] sm:text-[40px] md:text-[48px] font-[500] mb-6">
+        <div className="bg-[#081012]  w-full py-10 md:w-[65%] lg:w-[60%] text-center md:ml-auto md:mr-10">
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-[500]">
             Our Vision and Mission
           </h2>
 
-          <p className="text-[29px] font-[400] text-center sm:text-[18px] md:text-[24px] leading-[30px] md:leading-[32px]">
+          <p className="text-[14px] sm:text-[18px] md:text-[22px] lg:text-[24px] leading-[28px] md:leading-[32px]">
             As architects of connection, we empower businesses across the globe
             to envision a future where legacy technology serves as a foundational
             stepping stone towards progress. Our mission is to connect the dots

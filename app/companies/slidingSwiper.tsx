@@ -22,7 +22,7 @@ export default function CompaniesSlider() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="relative w-5xl py-12 overflow-hidden">
+    <div className="relative w-5xl py-12 ">
       {/* Blur Effect at Corners */}
       <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
       <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>

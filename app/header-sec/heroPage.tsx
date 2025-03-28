@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="bg-white text-[#050B0B] w-[100%] min-h-[777px] relative overflow-x-hidden">
+    <header className="bg-white text-[#050B0B] w-[100%] min-h-[777px] relative ">
 
       {/* Text Content */}
       <div className="md:left-[100px] w-[100%] md:w-[650px]">
